@@ -3,19 +3,19 @@
 %bcond_with	tests		# build with tests
 # TODO:
 # - fix build with aspell
-%define		kdeframever	6.14
+%define		kdeframever	6.15
 %define		qtver		5.15.2
 %define		kfname		sonnet
 
 Summary:	Multi-language spell checker
 Summary(pl.UTF-8):	Wielojęzyczne narzędzie do sprawdzania pisowni
 Name:		kf6-%{kfname}
-Version:	6.14.0
+Version:	6.15.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	13c0e8170ddee46d653b823253ef6d8e
+# Source0-md5:	03b7b199bf7c2e7461dcd632c1097c64
 URL:		https://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
