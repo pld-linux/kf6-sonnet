@@ -3,19 +3,19 @@
 %bcond_with	tests		# build with tests
 # TODO:
 # - fix build with aspell
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		sonnet
 
 Summary:	Multi-language spell checker
 Summary(pl.UTF-8):	Wielojęzyczne narzędzie do sprawdzania pisowni
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	335cdd07410ec9e1288b37308c18b2b4
+# Source0-md5:	c98060a4c69bb7fe33dcd0f39300866b
 URL:		https://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
@@ -58,8 +58,8 @@ Sonnet to oparta na wtyczkach biblioteka do sprawdzania pisowni dla
 aplikacji opartych na Qt. Obsługuje kilka różnych wtyzek, w tym
 HSpell, ASpell i HUNSPELL.
 
-Pozwala automatycznie wykrywać język w oparciu o połączenie
-różnych algorytmów.
+Pozwala automatycznie wykrywać język w oparciu o połączenie różnych
+algorytmów.
 
 Najprostszy sposób użycia Sonneta w aplikacji to użycie klasy
 SpellCheckDecorator w obiekcie QTextEdit.
@@ -111,16 +111,16 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md
 %attr(755,root,root) %{_bindir}/parsetrigrams6
 %ghost %{_libdir}/libKF6SonnetCore.so.6
-%attr(755,root,root) %{_libdir}/libKF6SonnetCore.so.*.*
+%{_libdir}/libKF6SonnetCore.so.*.*
 %ghost %{_libdir}/libKF6SonnetUi.so.6
-%attr(755,root,root) %{_libdir}/libKF6SonnetUi.so.*.*
+%{_libdir}/libKF6SonnetUi.so.*.*
 %dir %{qt6dir}/plugins/kf6/sonnet
 %attr(755,root,root) %{qt6dir}/plugins/kf6/sonnet/sonnet_aspell.so
 %attr(755,root,root) %{qt6dir}/plugins/kf6/sonnet/sonnet_hspell.so
 %attr(755,root,root) %{qt6dir}/plugins/kf6/sonnet/sonnet_hunspell.so
 %attr(755,root,root) %{qt6dir}/plugins/kf6/sonnet/sonnet_voikko.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/sonnet6widgets.so
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/sonnet/libsonnetquickplugin.so
+%{_libdir}/qt6/plugins/designer/sonnet6widgets.so
+%{_libdir}/qt6/qml/org/kde/sonnet/libsonnetquickplugin.so
 %dir %{_libdir}/qt6/qml/org/kde/sonnet
 %{_libdir}/qt6/qml/org/kde/sonnet/qmldir
 %{_libdir}/qt6/qml/org/kde/sonnet/kde-qmlmodule.version
