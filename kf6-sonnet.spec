@@ -55,7 +55,7 @@ SpellCheckDecorator class on your QTextEdit.
 
 %description -l pl.UTF-8
 Sonnet to oparta na wtyczkach biblioteka do sprawdzania pisowni dla
-aplikacji opartych na Qt. Obsługuje kilka różnych wtyzek, w tym
+aplikacji opartych na Qt. Obsługuje kilka różnych wtyczek, w tym
 HSpell, ASpell i HUNSPELL.
 
 Pozwala automatycznie wykrywać język w oparciu o połączenie różnych
